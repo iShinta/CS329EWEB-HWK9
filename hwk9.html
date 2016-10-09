@@ -6,6 +6,86 @@
 </head>
 
 <body>
-	<div><h1>Self Grading Quiz</h1></div>
+	<script type="text/javascript">
+	<!--
+		function grade(){
+			var res = 0;
+
+			//Q1
+
+			if(document.getElementById("q1b").checked){
+				alert("Q1 correct");
+				res++;
+			}
+
+			//Q2
+			if(document.forms["quiz"]["q2a"].checked){
+				alert("Q2 correct");
+				res++;
+			}
+
+			//Q3
+			if(!document.getElementById("q3a").checked && document.getElementById("q3b").checked && !document.getElementById("q3c").checked && !document.getElementById("q3d").checked){
+				alert("Q3 correct");
+				res++;
+			}
+
+			//Q4
+			if(!document.getElementById("q4a").checked && !document.getElementById("q4b").checked && !document.getElementById("q4c").checked && document.getElementById("q4d").checked){
+				alert("Q4 correct");
+				res++;
+			}
+
+			//Q5
+			if(document.getElementById("q5").value.toLowerCase() == "galaxy"){
+				alert("Q5 correct");
+				res++
+			}
+
+			//Q6
+			if(document.getElementById("q6").value.toLowerCase() == "age"){
+				alert("Q6 correct");
+				res++
+			}
+
+			alert("Your grade is " +res +" / 6");
+		}
+	-->
+	</script>
+	<form name="quiz" method="post" action="#">
+	<div id="content">
+		<h1>Astronomy Quiz</h1>
+		<h2>True / False</h2>
+
+		<div>1) According to Kepler the orbit of the earth is a circle with the sun at the center.
+		<br /><input id="q1a" name="q1" type="radio" />a) True
+		<br /><input id="q1b" name="q1" type="radio" />b) False</div>
+
+		<div><br />2) Ancient astronomers did consider the heliocentric model of the solar system but rejected it because they could not detect parallax.
+		<br /><input id="q2a" name="q2" type="radio" />a) True
+		<br /><input id="q2b" name="q2" type="radio" />b) False</div>
+
+		<h2>Multiple Choice</h2>
+
+		<div><br />3) The total amount of energy that a star emits is directly related to its
+		<br /><input id="q3a" name="q3a" type="checkbox" />a) surface gravity and magnetic field
+		<br /><input id="q3b" name="q3b" type="checkbox" />b) radius and temperature
+		<br /><input id="q3c" name="q3c" type="checkbox" />c) pressure and volume
+		<br /><input id="q3d" name="q3d" type="checkbox" />d) location and velocity</div>
+
+		<div><br />4) Stars that live the longest have
+		<br /><input id="q4a" name="q4a" type="checkbox" />a) high mass
+		<br /><input id="q4b" name="q4b" type="checkbox" />b) high temperature
+		<br /><input id="q4c" name="q4c" type="checkbox" />c) lots of hydrogen
+		<br /><input id="q4d" name="q4d" type="checkbox" />d) small mass</div>
+
+		<h2>Fill in the Blank</h2>
+
+		<div>5) A collection of a hundred billion stars, gas, and dust is called a <input id="q5" name="q5" type="text" />.</div>
+
+		<div><br />6) The inverse of the Hubble's constant is a measure of the <input id="q6" name="q6" type="text" /> of the universe.</div>
+	</div>
+	<br /><input name="submit" type="button" onclick="grade();" value="Grade" /><input name="reset" type="reset" value="Clear" />
+	</form>
 </body>
 </html>
