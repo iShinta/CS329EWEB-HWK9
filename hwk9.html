@@ -12,39 +12,56 @@
 			var res = 0;
 
 			//Q1
-
-			if(document.getElementById("q1b").checked){
-				alert("Q1 correct");
+			if(!document.forms["quiz"]["q1a"].checked && !document.forms["quiz"]["q1b"].checked){
+				alert("You didn't answer Q1");
+				return false;
+			}else if(document.getElementById("q1b").checked){
+				// alert("Q1 correct");
 				res++;
 			}
 
 			//Q2
-			if(document.forms["quiz"]["q2a"].checked){
-				alert("Q2 correct");
+			if(!document.forms["quiz"]["q2a"].checked && !document.forms["quiz"]["q2b"].checked){
+				alert("You didn't answer Q2");
+				return false;
+			}else if(document.forms["quiz"]["q2a"].checked){
+				// alert("Q2 correct");
 				res++;
 			}
 
 			//Q3
-			if(!document.getElementById("q3a").checked && document.getElementById("q3b").checked && !document.getElementById("q3c").checked && !document.getElementById("q3d").checked){
-				alert("Q3 correct");
+			if(!document.getElementById("q3a").checked && !document.getElementById("q3b").checked && !document.getElementById("q3c").checked && !document.getElementById("q3d").checked){
+				alert("You didn't answer Q3");
+				return false;
+			}else if(!document.getElementById("q3a").checked && document.getElementById("q3b").checked && !document.getElementById("q3c").checked && !document.getElementById("q3d").checked){
+				// alert("Q3 correct");
 				res++;
 			}
 
 			//Q4
-			if(!document.getElementById("q4a").checked && !document.getElementById("q4b").checked && !document.getElementById("q4c").checked && document.getElementById("q4d").checked){
-				alert("Q4 correct");
+			if(!document.getElementById("q4a").checked && !document.getElementById("q4b").checked && !document.getElementById("q4c").checked && !document.getElementById("q4d").checked){
+				alert("You didn't answer Q4");
+				return false;
+			}else if(!document.getElementById("q4a").checked && !document.getElementById("q4b").checked && !document.getElementById("q4c").checked && document.getElementById("q4d").checked){
+				// alert("Q4 correct");
 				res++;
 			}
 
 			//Q5
-			if(document.getElementById("q5").value.toLowerCase() == "galaxy"){
-				alert("Q5 correct");
+			if(document.getElementById("q5").value.toLowerCase() == ""){
+				alert("You didn't answer Q5");
+				return false;
+			}else if(document.getElementById("q5").value.toLowerCase() == "galaxy"){
+				// alert("Q5 correct");
 				res++
 			}
 
 			//Q6
-			if(document.getElementById("q6").value.toLowerCase() == "age"){
-				alert("Q6 correct");
+			if(document.getElementById("q6").value.toLowerCase() == ""){
+				alert("You didn't answer Q6");
+				return false;
+			}else if(document.getElementById("q6").value.toLowerCase() == "age"){
+				// alert("Q6 correct");
 				res++
 			}
 
